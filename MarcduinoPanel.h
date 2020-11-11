@@ -4,12 +4,15 @@
 MARCDUINO_ACTION(CloseAllPanels, :CL00, ({
     //Marcduino::processCommand(player, "@4S3");
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, GROUP_DOORS);
+    DEBUG_PRINTLN("CLOSE ALL"); 
 }))
 
 ////////////////
 
 MARCDUINO_ACTION(OpenAllPanels, :OP00, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, GROUP_DOORS);
+    
+   DEBUG_PRINTLN("OPEN ALL"); 
 }))
 
 ////////////////
