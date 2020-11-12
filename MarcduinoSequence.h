@@ -194,7 +194,23 @@ MARCDUINO_ACTION(RythmicPanelSequence, :SE57, ({
 
 ////////////////
 
-MARCDUINO_ANIMATION(HarlemShakeSequence, $815)
+MARCDUINO_ANIMATION(GripperArmON, GAON)
+{
+  DO_START()
+  DO_ONCE_AND_WAIT({
+        servoDispatch.moveTo(DOOR_LEFT, 50, 500, 1.0); 
+    }, 1000)
+    DO_ONCE_AND_WAIT({
+        servoDispatch.moveTo(GRIPP_LIFT, 50, 500, 1.0);
+        servoDispatch.moveTo(GRIPP_CLAW, 50, 500, 1.0); 
+    }, 3000)
+    DO_ONCE({
+        servoDispatch.moveTo(GRIPP_CLAW, 50, 500, 0.0); 
+    })
+    DO_END()
+}
+
+MARCDUINO_ANIMATION(HarlemShakeSequence, ARML)
 {
     DO_START()
     // Wait 2 seconds

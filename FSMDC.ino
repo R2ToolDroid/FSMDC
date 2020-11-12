@@ -26,7 +26,7 @@
 #define DRAWER_2     12
 #define DRAWER_3     13
 #define DRAWER_4     14
-
+#define FIRE         15
 
 #define PANEL_GROUP_1      (1L<<14)
 #define PANEL_GROUP_2      (1L<<15)
@@ -44,24 +44,24 @@
 #define PANELS_MASK        (DRAWER_GROUP|GROUP_DOORS)
 
 const ServoSettings servoSettings[] PROGMEM = {
-    //* PIN, closed, Open, GRoupe//
+    //* PIN, closed 0, Open 1, GRoupe//
     
-    { 1,  1000,  2090, GROUP_DOORS|PANEL_GROUP_1|BIG_DOOR_GROUP },  /* 0: DOOR_LEFT */
-    { 2,  1000,  2050, GROUP_DOORS|PANEL_GROUP_2},  /* 1: DOOR_DATAPANEL */
-    { 3,  2050, 1000, GROUP_DOORS|PANEL_GROUP_3},  /* 2: DOOR_CHARGEBAY  */
-    { 4,  1000, 2050, GROUP_DOORS|PANEL_GROUP_4},   /* 3: DOOR_MINI */
-    { 5,  2150, 1100, GROUP_DOORS|PANEL_GROUP_5|BIG_DOOR_GROUP },    /* 4: DOOR_RIGHT */
+    { 1,  2150,  1200, GROUP_DOORS|PANEL_GROUP_1|BIG_DOOR_GROUP },  /* 0: DOOR_LEFT */
+    { 2,  2100,  1000, GROUP_DOORS|PANEL_GROUP_2},  /* 1: DOOR_DATAPANEL */
+    { 3,  900, 2250, GROUP_DOORS|PANEL_GROUP_3},  /* 2: DOOR_CHARGEBAY  */
+    { 4,  2050, 1300, GROUP_DOORS|PANEL_GROUP_4},   /* 3: DOOR_MINI */
+    { 5,  1300, 2050, GROUP_DOORS|PANEL_GROUP_5|BIG_DOOR_GROUP },    /* 4: DOOR_RIGHT */
     { 6,  600, 2500, 0 },             /* 5: UPPER_ARM */
     { 7,  600, 2500, 0 },             /* 6: LOWER_ARM */
-    { 8,  1000, 2050, 0 },            /* 7: GRIPP_LIFT */
-    { 9,  1000, 2050, 0 },            /* 8: GRIPP_CLAW */
-    { 10, 1000, 2050, 0 },            /* 9: CPUARM_EXTEND */
-    { 11, 1000, 2050, 0 },            /* 10:CPUARM_LIFT */
-    { 12, 1000, 2050, DRAWER_GROUP|DRAWER_GROUP_1 }, /* 11:DRAWER_1 */
-    { 13, 1000, 2050, DRAWER_GROUP|DRAWER_GROUP_2 }, /* 12:DRAWER_2 */ 
-    { 14, 1000, 2050, DRAWER_GROUP|DRAWER_GROUP_3 }, /*|13:DRAWER_3 */ 
-    { 15, 1000, 2050, DRAWER_GROUP|DRAWER_GROUP_4 }, /* 13:DRAWER_4 */ 
-    
+    { 8,  800, 2050, 0 },            /* 7: GRIPP_LIFT */
+    { 9,  1000, 1600, 0 },            /* 8: GRIPP_CLAW */
+    { 10, 1100, 800, 0 },            /* 9: CPUARM_EXTEND */
+    { 11, 800, 2050, 0 },            /* 10:CPUARM_LIFT */
+    { 12, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_1 }, /* 11:DRAWER_1 */
+    { 13, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_2 }, /* 12:DRAWER_2 */ 
+    { 14, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_3 }, /*|13:DRAWER_3 */ 
+    { 15, 1800, 1000, DRAWER_GROUP|DRAWER_GROUP_4 }, /* 14:DRAWER_4 */ 
+    { 16, 1000, 1500, 0 }, /* 15:FIRE */
 };
 
 

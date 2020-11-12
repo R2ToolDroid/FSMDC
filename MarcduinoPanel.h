@@ -3,7 +3,8 @@
 
 MARCDUINO_ACTION(CloseAllPanels, :CL00, ({
     //Marcduino::processCommand(player, "@4S3");
-    SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, GROUP_DOORS);
+    //SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, GROUP_DOORS);
+    resetSequence();
     DEBUG_PRINTLN("CLOSE ALL"); 
 }))
 
@@ -128,6 +129,43 @@ MARCDUINO_ACTION(CloseLowerArm, CLLA, ({
     CloseLowerArm();
 }))
 
+
+MARCDUINO_ACTION(LiftGripperArm, LGA, ({
+    GrippLift();
+}))
+
+MARCDUINO_ACTION(DownGripperArm, DGA, ({
+    GrippDown();
+}))
+
+MARCDUINO_ACTION(CloseClaw, CC, ({
+    CloseClaw();
+}))
+
+MARCDUINO_ACTION(OpenClaw, OC, ({
+    OpenClaw();
+}))
+
+MARCDUINO_ACTION(CPUArmLift, CPUL, ({
+    CPUArmLift();
+}))
+
+MARCDUINO_ACTION(CPUArmDown, CPUD, ({
+    CPUArmDown();
+}))
+
+MARCDUINO_ACTION(CPUArmON, CPU1, ({
+    CPUArmON();
+}))
+
+MARCDUINO_ACTION(CPUArmOFF, CPU0, ({
+    CPUArmOFF();
+}))
+
+
+
+
+
 //////////////////
 ////DRAWER SECTION
 //////////////////  
@@ -240,6 +278,13 @@ MARCDUINO_ACTION(FlutterPanelGroup5, :OF05, ({
     SEQUENCE_PLAY_ONCE_VARSPEED(servoSequencer, SeqPanelAllFlutter, PANEL_GROUP_5 , 10, 50);
 }))
 
+MARCDUINO_ACTION(FireOn, FOUT, ({
+    FireOut();
+}))
+
+MARCDUINO_ACTION(FireOFF, FIN, ({
+    FireIn();
+}))
 ////////////////
 /*
 
