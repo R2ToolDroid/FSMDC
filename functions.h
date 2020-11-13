@@ -52,15 +52,16 @@ void CPUArmOFF(){
 }
 
 void FireOut(){
-  servoDispatch.moveTo(FIRE, 50, 50, 1.0);
+  servoDispatch.moveToPulse(FIRE, 50, 50, 1300);
 }
 
 void FireIn() {
-  servoDispatch.moveTo(FIRE, 50, 50, 0.0);
+  //servoDispatch.moveTo(FIRE, 50, 50, 0.0);
+  servoDispatch.moveToPulse(FIRE, 50, 50, 1800);
 }
 
 void FireStop(){
-  servoDispatch.moveToPulse(FIRE, 150, 100, 1500); // Einzenelner Servo
+  servoDispatch.moveToPulse(FIRE, 50, 50, 1550); // Einzenelner Servo 1400
 }
 
 
@@ -75,14 +76,15 @@ void resetSequence()
     DelayCall::schedule([] {
    SEQUENCE_PLAY_ONCE_VARSPEED_EASING(servoSequencer, SeqPanelAllCloseLong, PANELS_MASK, 50, 2000, Easing::CircularEaseIn, Easing::CircularEaseOut);
    //servoSequencer.play(SeqPanelAllCloseLong, SizeOfArray(SeqPanelAllCloseLong), (PANELS_MASK));
-    }, 2000);
+    }, 3000);
     
     CloseUpperArm();
     CloseLowerArm();
     CloseClaw();
     GrippDown();
     CPUArmDown();
-   //FireStop();
+   // FireIn();
+    //FireStop();
    
    DEBUG_PRINTLN("reset.OK"); 
 }

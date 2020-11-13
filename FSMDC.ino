@@ -49,21 +49,21 @@
 const ServoSettings servoSettings[] PROGMEM = {
     //* PIN, closed 0, Open 1, GRoupe//
     
-    { 1,  2150,  1200, GROUP_DOORS|PANEL_GROUP_1|BIG_DOOR_GROUP },  /* 0: DOOR_LEFT */
+    { 1,  2200,  1200, GROUP_DOORS|PANEL_GROUP_1|BIG_DOOR_GROUP },  /* 0: DOOR_LEFT */
     { 2,  2100,  1000, GROUP_DOORS|PANEL_GROUP_2},  /* 1: DOOR_DATAPANEL */
-    { 3,  900, 2250, GROUP_DOORS|PANEL_GROUP_3},  /* 2: DOOR_CHARGEBAY  */
-    { 4,  2050, 1300, GROUP_DOORS|PANEL_GROUP_4},   /* 3: DOOR_MINI */
-    { 5,  1300, 2050, GROUP_DOORS|PANEL_GROUP_5|BIG_DOOR_GROUP },    /* 4: DOOR_RIGHT */
+    { 3,  1200, 2250, GROUP_DOORS|PANEL_GROUP_3},  /* 2: DOOR_CHARGEBAY  */
+    { 4,  2100, 1400, GROUP_DOORS|PANEL_GROUP_4},   /* 3: DOOR_MINI */
+    { 5,  1200, 2200, GROUP_DOORS|PANEL_GROUP_5|BIG_DOOR_GROUP },    /* 4: DOOR_RIGHT */
     { 6,  600, 2500, 0 },             /* 5: UPPER_ARM */
     { 7,  600, 2500, 0 },             /* 6: LOWER_ARM */
     { 8,  800, 2050, 0 },            /* 7: GRIPP_LIFT */
-    { 9,  1000, 1600, 0 },            /* 8: GRIPP_CLAW */
-    { 10, 1100, 800, 0 },            /* 9: CPUARM_EXTEND */
+    { 9,  1000, 1400, 0 },            /* 8: GRIPP_CLAW */
+    { 10, 1100, 900, 0 },            /* 9: CPUARM_EXTEND */
     { 11, 800, 2050, 0 },            /* 10:CPUARM_LIFT */
     { 12, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_1 }, /* 11:DRAWER_1 */
     { 13, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_2 }, /* 12:DRAWER_2 */ 
     { 14, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_3 }, /*|13:DRAWER_3 */ 
-    { 15, 1800, 1000, DRAWER_GROUP|DRAWER_GROUP_4 }, /* 14:DRAWER_4 */ 
+    { 15, 1900, 1000, DRAWER_GROUP|DRAWER_GROUP_4 }, /* 14:DRAWER_4 */ 
     { 16, 1000, 2000, 0 }, /* 15:FIRE */
     
     { 17, 1000, 1500, 0 }, /* 15:SPRAY */

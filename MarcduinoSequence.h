@@ -221,6 +221,10 @@ MARCDUINO_ANIMATION(FireON, #FION)
         FireOut();
     })
     DO_WAIT_MILLIS(500)
+    DO_ONCE({
+        FireOut();
+    })
+    DO_WAIT_MILLIS(500)
     
     DO_ONCE({
         FireStop();
@@ -236,11 +240,13 @@ MARCDUINO_ANIMATION(FireOFF, #FIOFF)
         FireIn();
     })
     DO_WAIT_MILLIS(500)
-    
+    DO_ONCE({
+        FireIn();
+    })
+    DO_WAIT_MILLIS(500)
     DO_ONCE({
         FireStop();
     })
-    
     DO_WAIT_MILLIS(1500)
     
      
@@ -261,7 +267,7 @@ MARCDUINO_ANIMATION(Spray,#SPRAY)
     DO_WAIT_MILLIS(500)
     
     DO_ONCE({
-        servoDispatch.moveTo(SPRAY, 50, 50, .0);
+        servoDispatch.moveTo(SPRAY, 50, 50, 0.0);
     })
     
     DO_END()
@@ -276,20 +282,26 @@ MARCDUINO_ANIMATION(SrewArmON, #SAON)
         servoDispatch.moveTo(DOOR_RIGHT, 50, 100, 1.0); 
     }, 1000)
     DO_ONCE_AND_WAIT({
-        servoDispatch.moveTo(CPUARM_LIFT, 50, 500, 1.0);
-        servoDispatch.moveTo(GRIPP_CLAW, 50, 200, 1.0); 
+        //servoDispatch.moveTo(CPUARM_LIFT, 50, 500, 1.0);
+        CPUArmLift();
     }, 3000)
     DO_ONCE({
-        servoDispatch.moveTo(CPUARM_EXTEND, 50, 50, 1.0); 
+        //servoDispatch.moveTo(CPUARM_EXTEND, 50, 50, 1.0);
+        CPUArmON(); 
     })
     DO_WAIT_MILLIS(500)
     DO_ONCE({
-        servoDispatch.moveTo(CPUARM_EXTEND, 50, 50, 0.0); 
+        CPUArmOFF();
     })
     DO_WAIT_MILLIS(500)
     DO_ONCE({
-        servoDispatch.moveTo(CPUARM_EXTEND, 50, 50, 1.0); 
+       CPUArmON(); 
     })
+    DO_WAIT_MILLIS(500)
+    DO_ONCE({
+       CPUArmOFF(); 
+    })
+    
     DO_END()
 }
 

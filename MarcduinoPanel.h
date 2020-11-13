@@ -277,7 +277,7 @@ MARCDUINO_ACTION(FlutterPanelGroup4, #OF04, ({
 MARCDUINO_ACTION(FlutterPanelGroup5, #OF05, ({
     SEQUENCE_PLAY_ONCE_VARSPEED(servoSequencer, SeqPanelAllFlutter, PANEL_GROUP_5 , 10, 50);
 }))
-/*
+
 MARCDUINO_ACTION(FireOut, FOUT, ({
      //servoDispatch.moveToPulse(FIRE, 150, 100, 800); // Einzenelner Servo
      FireOut();
@@ -287,13 +287,39 @@ MARCDUINO_ACTION(FireIN, FIN, ({
    // servoDispatch.moveToPulse(FIRE, 150, 100, 1800); // Einzenelner Servo
    FireIn();
 }))
-*/
+
 MARCDUINO_ACTION(FireStop, #F0, ({
    // servoDispatch.moveToPulse(FIRE, 150, 100, 1800); // Einzenelner Servo
    FireStop();
 }))
 
+/*////FIRESTOP test/////////
 
+MARCDUINO_ACTION(FireStop1, 1, ({
+   servoDispatch.moveToPulse(FIRE, 50, 50, 1500); // Einzenelner Servo
+   //FireStop();
+}))
+
+MARCDUINO_ACTION(FireStop2, 2, ({
+   servoDispatch.moveToPulse(FIRE, 50, 50, 1550); // Einzenelner Servo
+   //FireStop();
+}))
+MARCDUINO_ACTION(FireStop3, 3, ({
+   servoDispatch.moveToPulse(FIRE, 50, 50, 1600); // Einzenelner Servo
+   //FireStop();
+}))
+
+MARCDUINO_ACTION(FireStop4, 4, ({
+   servoDispatch.moveToPulse(FIRE, 50, 50, 1700); // Einzenelner Servo
+   //FireStop();
+}))
+
+MARCDUINO_ACTION(FireStop5, 5, ({
+   servoDispatch.moveToPulse(FIRE, 50, 50, 1800); // Einzenelner Servo
+   //FireStop();
+}))
+
+*/
 
 MARCDUINO_ACTION(SprayON, #SP1, ({
     //servoDispatch.moveToPulse(SPRAY, 150, 100, 800); // Einzenelner Servo
