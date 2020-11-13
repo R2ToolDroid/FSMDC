@@ -11,7 +11,7 @@ MARCDUINO_ACTION(CloseAllPanels, #CL00, ({
 ////////////////
 
 MARCDUINO_ACTION(OpenAllPanels, #OP00, ({
-    SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, GROUP_DOORS);
+    SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpenLong, GROUP_DOORS);
     
    DEBUG_PRINTLN("OPEN ALL"); 
 }))
@@ -172,62 +172,62 @@ MARCDUINO_ACTION(CPUArmOFF, #CPU0, ({
 
 ////////////////
 
-MARCDUINO_ACTION(OpenDrawerAll, :OPD0, ({
+MARCDUINO_ACTION(OpenDrawerAll, #OPD0, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, DRAWER_GROUP);
 }))
 
 
 ////////////////
 
-MARCDUINO_ACTION(OpenDrawerGroup1, :OPD1, ({
+MARCDUINO_ACTION(OpenDrawerGroup1, #OPD1, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, DRAWER_GROUP_1);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(OpenDrawerGroup2, :OPD2, ({
+MARCDUINO_ACTION(OpenDrawerGroup2, #OPD2, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, DRAWER_GROUP_2);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(OpenDrawerGroup3, :OPD3, ({
+MARCDUINO_ACTION(OpenDrawerGroup3, #OPD3, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, DRAWER_GROUP_3);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(OpenDrawerGroup4, :OPD4, ({
+MARCDUINO_ACTION(OpenDrawerGroup4, #OPD4, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, DRAWER_GROUP_4);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(CloseDrawerAll, :CLD0, ({
+MARCDUINO_ACTION(CloseDrawerAll, #CLD0, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, DRAWER_GROUP);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(CloseDrawerGroup1, :CLD1, ({
+MARCDUINO_ACTION(CloseDrawerGroup1, #CLD1, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, DRAWER_GROUP_1);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(CloseDrawerGroup2, :CLD2, ({
+MARCDUINO_ACTION(CloseDrawerGroup2, #CLD2, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, DRAWER_GROUP_2);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(CloseDrawerGroup3, :CLD3, ({
+MARCDUINO_ACTION(CloseDrawerGroup3, #CLD3, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, DRAWER_GROUP_3);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(CloseDrawerGroup4, :CLD4, ({
+MARCDUINO_ACTION(CloseDrawerGroup4, #CLD4, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, DRAWER_GROUP_4);
 }))
 /*
@@ -250,31 +250,31 @@ MARCDUINO_ACTION(CloseBottomPanels, :CL12, ({
 ////////////////
 */
 
-MARCDUINO_ACTION(FlutterPanelGroup1, :OF01, ({
+MARCDUINO_ACTION(FlutterPanelGroup1, #OF01, ({
     SEQUENCE_PLAY_ONCE_VARSPEED(servoSequencer, SeqPanelAllFlutter, PANEL_GROUP_1 , 10, 50);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(FlutterPanelGroup2, :OF02, ({
+MARCDUINO_ACTION(FlutterPanelGroup2, #OF02, ({
     SEQUENCE_PLAY_ONCE_VARSPEED(servoSequencer, SeqPanelAllFlutter, PANEL_GROUP_2 , 10, 50);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(FlutterPanelGroup3, :OF03, ({
+MARCDUINO_ACTION(FlutterPanelGroup3, #OF03, ({
     SEQUENCE_PLAY_ONCE_VARSPEED(servoSequencer, SeqPanelAllFlutter, PANEL_GROUP_3 , 10, 50);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(FlutterPanelGroup4, :OF04, ({
+MARCDUINO_ACTION(FlutterPanelGroup4, #OF04, ({
     SEQUENCE_PLAY_ONCE_VARSPEED(servoSequencer, SeqPanelAllFlutter, PANEL_GROUP_4 , 10, 50);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(FlutterPanelGroup5, :OF05, ({
+MARCDUINO_ACTION(FlutterPanelGroup5, #OF05, ({
     SEQUENCE_PLAY_ONCE_VARSPEED(servoSequencer, SeqPanelAllFlutter, PANEL_GROUP_5 , 10, 50);
 }))
 /*
@@ -288,19 +288,19 @@ MARCDUINO_ACTION(FireIN, FIN, ({
    FireIn();
 }))
 */
-MARCDUINO_ACTION(FireStop, F0, ({
+MARCDUINO_ACTION(FireStop, #F0, ({
    // servoDispatch.moveToPulse(FIRE, 150, 100, 1800); // Einzenelner Servo
    FireStop();
 }))
 
 
 
-MARCDUINO_ACTION(SprayON, SP1, ({
+MARCDUINO_ACTION(SprayON, #SP1, ({
     //servoDispatch.moveToPulse(SPRAY, 150, 100, 800); // Einzenelner Servo
     servoDispatch.moveTo(SPRAY, 50, 50, 1.0);
 }))
 
-MARCDUINO_ACTION(SprayOFF, SP0, ({
+MARCDUINO_ACTION(SprayOFF, #SP0, ({
     ///servoDispatch.moveToPulse(SPRAY, 150, 100, 1800); // Einzenelner Servo
     servoDispatch.moveTo(SPRAY, 50, 50, 0.0);
 }))

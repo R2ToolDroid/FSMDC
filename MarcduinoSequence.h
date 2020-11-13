@@ -15,14 +15,14 @@ MARCDUINO_ACTION(ScreamSequence, :SE01, ({
 ////////////////
 
 MARCDUINO_ACTION(WaveSequence, :SE02, ({
-    Marcduino::send(F("$213"));
+   // Marcduino::send(F("$213"));
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelWave, GROUP_DOORS);
 }))
 
 ////////////////
 
 MARCDUINO_ACTION(SmirkWaveSequence, :SE03, ({
-    Marcduino::send(F("$34"));
+   // Marcduino::send(F("$34"));
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelWaveFast, GROUP_DOORS);
 }))
 

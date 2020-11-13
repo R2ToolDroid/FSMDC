@@ -72,12 +72,12 @@ const ServoSettings servoSettings[] PROGMEM = {
 
 static const ServoSequence SeqPanelAllOpenLong PROGMEM =
 {
-    { 1000,   B11111111, B11111111, B11111111, B11111111 },
+    { 2000,   B11111111, B11111111, B11111111, B11111111 },
 };
 
 static const ServoSequence SeqPanelAllCloseLong PROGMEM =
 {
-    { 1000,   B00000000, B00000000, B00000000, B00000000 },
+    { 2000,   B00000000, B00000000, B00000000, B00000000 },
 };
 
 
@@ -86,6 +86,8 @@ ServoDispatchPCA9685<SizeOfArray(servoSettings)> servoDispatch(servoSettings);
 ServoSequencer servoSequencer(servoDispatch);
 AnimationPlayer player(servoSequencer);
 MarcduinoSerial<> marcduinoSerial(COMMAND_SERIAL, player);
+
+
 
 int ledState = LOW;   
 
