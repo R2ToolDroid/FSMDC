@@ -1,4 +1,6 @@
 #define USE_DEBUG 
+//#define USE_SERVO_DEBUG
+//#define USE_VERBOSE_SERVO_DEBUG
 #include "ReelTwo.h"
 #include "core/Animation.h"
 #include "core/DelayCall.h"
@@ -27,6 +29,7 @@
 #define DRAWER_3     13
 #define DRAWER_4     14
 #define FIRE         15
+#define SPRAY        16
 
 #define PANEL_GROUP_1      (1L<<14)
 #define PANEL_GROUP_2      (1L<<15)
@@ -61,7 +64,9 @@ const ServoSettings servoSettings[] PROGMEM = {
     { 13, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_2 }, /* 12:DRAWER_2 */ 
     { 14, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_3 }, /*|13:DRAWER_3 */ 
     { 15, 1800, 1000, DRAWER_GROUP|DRAWER_GROUP_4 }, /* 14:DRAWER_4 */ 
-    { 16, 1000, 1500, 0 }, /* 15:FIRE */
+    { 16, 1000, 2000, 0 }, /* 15:FIRE */
+    
+    { 17, 1000, 1500, 0 }, /* 15:SPRAY */
 };
 
 
@@ -123,6 +128,7 @@ void setup()
 
     //SEQUENCE_PLAY_ONCE(servoSequencer, sMySeqPanelAllOpen, GROUP_DOORS);
     //servoDispatch.moveServosTo(GROUP_DOORS, 150, 100, 1.0); // completely open
+    //servoDispatch.moveToPulse(FIRE, 150, 100, 800); // Einzenelner Servo
     //SEQUENCE_PLAY_ONCE_VARSPEED_EASING(servoSequencer, SeqPanelMarchingAnts, GROUP_DOORS, 500, 1000, Easing::CircularEaseIn, Easing::BounceEaseOut);
 }
 

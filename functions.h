@@ -51,13 +51,16 @@ void CPUArmOFF(){
 }
 
 void FireOut(){
-  servoDispatch.moveTo(FIRE, 50, 500, 1.0);
+  servoDispatch.moveTo(FIRE, 50, 50, 1.0);
 }
 
 void FireIn() {
-  servoDispatch.moveTo(FIRE, 50, 500, 0.0);
+  servoDispatch.moveTo(FIRE, 50, 50, 0.0);
 }
 
+void FireStop(){
+  servoDispatch.moveToPulse(FIRE, 150, 100, 1500); // Einzenelner Servo
+}
 
 
 
@@ -67,8 +70,8 @@ void resetSequence()
     //servoSequencer.play(SeqPanelAllCloseLong, SizeOfArray(SeqPanelAllCloseLong), (GROUP_DOORS));
         
     DelayCall::schedule([] {
-   //SEQUENCE_PLAY_ONCE_VARSPEED_EASING(servoSequencer, SeqPanelAllClose, PANELS_MASK, 500, 1000, Easing::CircularEaseIn, Easing::CircularEaseOut);
-   servoSequencer.play(SeqPanelAllCloseLong, SizeOfArray(SeqPanelAllCloseLong), (PANELS_MASK));
+   SEQUENCE_PLAY_ONCE_VARSPEED_EASING(servoSequencer, SeqPanelAllClose, PANELS_MASK, 500, 1000, Easing::CircularEaseIn, Easing::CircularEaseOut);
+   //servoSequencer.play(SeqPanelAllCloseLong, SizeOfArray(SeqPanelAllCloseLong), (PANELS_MASK));
     }, 2000);
     
     CloseUpperArm();
@@ -76,7 +79,7 @@ void resetSequence()
     CloseClaw();
     GrippDown();
     CPUArmDown();
-   //FireOFF();
+   //FireStop();
    
    DEBUG_PRINTLN("reset.OK"); 
 }

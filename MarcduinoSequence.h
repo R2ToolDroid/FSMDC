@@ -210,6 +210,90 @@ MARCDUINO_ANIMATION(GripperArmON, GAON)
     DO_END()
 }
 
+MARCDUINO_ANIMATION(FireON, FION)
+{
+  DO_START()
+  DO_ONCE_AND_WAIT({
+        servoDispatch.moveTo(DOOR_MINI, 50, 500, 1.0); 
+    }, 1000)
+    
+    DO_ONCE({
+        FireOut();
+    })
+    DO_WAIT_MILLIS(500)
+    
+    DO_ONCE({
+        FireStop();
+    })   
+    DO_END()
+}
+
+MARCDUINO_ANIMATION(FireOFF, FIOFF)
+{
+  DO_START()
+
+  DO_ONCE({
+        FireIn();
+    })
+    DO_WAIT_MILLIS(500)
+    
+    DO_ONCE({
+        FireStop();
+    })
+    
+    DO_WAIT_MILLIS(1500)
+    
+     
+    DO_ONCE({
+        servoDispatch.moveTo(DOOR_MINI, 50, 500, .0); 
+    })
+    DO_END()
+}
+
+
+MARCDUINO_ANIMATION(Spray,SPRAY)
+{
+  DO_START()
+
+  DO_ONCE({
+        servoDispatch.moveTo(SPRAY, 50, 50, 1.0);
+    })
+    DO_WAIT_MILLIS(500)
+    
+    DO_ONCE({
+        servoDispatch.moveTo(SPRAY, 50, 50, .0);
+    })
+    
+    DO_END()
+}
+
+
+
+MARCDUINO_ANIMATION(SrewArmON, SAON)
+{
+  DO_START()
+  DO_ONCE_AND_WAIT({
+        servoDispatch.moveTo(DOOR_RIGHT, 50, 100, 1.0); 
+    }, 1000)
+    DO_ONCE_AND_WAIT({
+        servoDispatch.moveTo(CPUARM_LIFT, 50, 500, 1.0);
+        servoDispatch.moveTo(GRIPP_CLAW, 50, 200, 1.0); 
+    }, 3000)
+    DO_ONCE({
+        servoDispatch.moveTo(CPUARM_EXTEND, 50, 50, 1.0); 
+    })
+    DO_WAIT_MILLIS(500)
+    DO_ONCE({
+        servoDispatch.moveTo(CPUARM_EXTEND, 50, 50, 0.0); 
+    })
+    DO_WAIT_MILLIS(500)
+    DO_ONCE({
+        servoDispatch.moveTo(CPUARM_EXTEND, 50, 50, 1.0); 
+    })
+    DO_END()
+}
+
+/*
 MARCDUINO_ANIMATION(HarlemShakeSequence, ARML)
 {
     DO_START()
@@ -250,3 +334,4 @@ MARCDUINO_ANIMATION(HarlemShakeSequence, ARML)
     })
     DO_END()
 }
+*/

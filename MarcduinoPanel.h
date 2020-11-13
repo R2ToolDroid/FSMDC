@@ -277,14 +277,34 @@ MARCDUINO_ACTION(FlutterPanelGroup4, :OF04, ({
 MARCDUINO_ACTION(FlutterPanelGroup5, :OF05, ({
     SEQUENCE_PLAY_ONCE_VARSPEED(servoSequencer, SeqPanelAllFlutter, PANEL_GROUP_5 , 10, 50);
 }))
-
-MARCDUINO_ACTION(FireOn, FOUT, ({
-    FireOut();
+/*
+MARCDUINO_ACTION(FireOut, FOUT, ({
+     //servoDispatch.moveToPulse(FIRE, 150, 100, 800); // Einzenelner Servo
+     FireOut();
 }))
 
-MARCDUINO_ACTION(FireOFF, FIN, ({
-    FireIn();
+MARCDUINO_ACTION(FireIN, FIN, ({
+   // servoDispatch.moveToPulse(FIRE, 150, 100, 1800); // Einzenelner Servo
+   FireIn();
 }))
+*/
+MARCDUINO_ACTION(FireStop, F0, ({
+   // servoDispatch.moveToPulse(FIRE, 150, 100, 1800); // Einzenelner Servo
+   FireStop();
+}))
+
+
+
+MARCDUINO_ACTION(SprayON, SP1, ({
+    //servoDispatch.moveToPulse(SPRAY, 150, 100, 800); // Einzenelner Servo
+    servoDispatch.moveTo(SPRAY, 50, 50, 1.0);
+}))
+
+MARCDUINO_ACTION(SprayOFF, SP0, ({
+    ///servoDispatch.moveToPulse(SPRAY, 150, 100, 1800); // Einzenelner Servo
+    servoDispatch.moveTo(SPRAY, 50, 50, 0.0);
+}))
+
 ////////////////
 /*
 
@@ -332,6 +352,7 @@ Each servo can have it's own easing style. To set servo easing there are three d
 For a single servo:
 
     servoDispatch.setServoEasingMethod(1, Easing::CircularEaseIn);
+    servoDispatch.moveToPulse(SPRAY, 150, 100, 800); // Einzenelner Servo
 
 For a group of servos
 
