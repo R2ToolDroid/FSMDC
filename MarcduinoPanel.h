@@ -1,7 +1,7 @@
 //////////////// ALLCOMANDS FOR DIRECT PANEL SERVO USING
 //////////////// Start with Marcduino Comands and Extend by CBD and Custom 
 
-MARCDUINO_ACTION(CloseAllPanels, :CL00, ({
+MARCDUINO_ACTION(CloseAllPanels, #CL00, ({
     //Marcduino::processCommand(player, "@4S3");
     //SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, GROUP_DOORS);
     resetSequence();
@@ -10,7 +10,7 @@ MARCDUINO_ACTION(CloseAllPanels, :CL00, ({
 
 ////////////////
 
-MARCDUINO_ACTION(OpenAllPanels, :OP00, ({
+MARCDUINO_ACTION(OpenAllPanels, #OP00, ({
     SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, GROUP_DOORS);
     
    DEBUG_PRINTLN("OPEN ALL"); 
@@ -18,13 +18,13 @@ MARCDUINO_ACTION(OpenAllPanels, :OP00, ({
 
 ////////////////
 
-MARCDUINO_ACTION(FlutterAllPanels, :OF00, ({
+MARCDUINO_ACTION(FlutterAllPanels, #OF00, ({
     SEQUENCE_PLAY_ONCE_VARSPEED(servoSequencer, SeqPanelAllFlutter, GROUP_DOORS, 10, 50);
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(OpenPanelGroup1, :OP01, ({
+MARCDUINO_ACTION(OpenPanelGroup1, #OP01, ({
    // SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, 0);
     // servoDispatch.setServoEasingMethod(GROUP_DOORS, Easing::CircularEaseIn);
      servoDispatch.setServoEasingMethod(DOOR_LEFT, Easing::CircularEaseIn);
@@ -34,7 +34,7 @@ MARCDUINO_ACTION(OpenPanelGroup1, :OP01, ({
 
 ////////////////
 
-MARCDUINO_ACTION(OpenPanelGroup2, :OP02, ({
+MARCDUINO_ACTION(OpenPanelGroup2, #OP02, ({
     //SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, DOOR_DATAPANEL);
     servoDispatch.setServoEasingMethod(DOOR_DATAPANEL, Easing::CircularEaseIn);
     servoDispatch.moveTo(DOOR_DATAPANEL, 150, 500, 1.0); // completely open
@@ -42,7 +42,7 @@ MARCDUINO_ACTION(OpenPanelGroup2, :OP02, ({
 
 ////////////////
 
-MARCDUINO_ACTION(OpenPanelGroup3, :OP03, ({
+MARCDUINO_ACTION(OpenPanelGroup3, #OP03, ({
     //SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, DOOR_CHARGEBAY);
     servoDispatch.setServoEasingMethod(DOOR_CHARGEBAY, Easing::CircularEaseIn);
     servoDispatch.moveTo(DOOR_CHARGEBAY, 150, 500, 1.0); // completely open
@@ -50,7 +50,7 @@ MARCDUINO_ACTION(OpenPanelGroup3, :OP03, ({
 
 ////////////////
 
-MARCDUINO_ACTION(OpenPanelGroup4, :OP04, ({
+MARCDUINO_ACTION(OpenPanelGroup4, #OP04, ({
     //SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, DOOR_MINI);
     servoDispatch.setServoEasingMethod(DOOR_MINI, Easing::CircularEaseIn);
     servoDispatch.moveTo(DOOR_MINI, 150, 500, 1.0); // completely open
@@ -58,7 +58,7 @@ MARCDUINO_ACTION(OpenPanelGroup4, :OP04, ({
 
 ////////////////
 
-MARCDUINO_ACTION(OpenPanelGroup5, :OP05, ({
+MARCDUINO_ACTION(OpenPanelGroup5, #OP05, ({
     //SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllOpen, DOOR_RIGHT);
     servoDispatch.setServoEasingMethod(DOOR_RIGHT, Easing::CircularEaseIn);
     servoDispatch.moveTo(DOOR_RIGHT, 150, 500, 1.0); // completely open
@@ -66,7 +66,7 @@ MARCDUINO_ACTION(OpenPanelGroup5, :OP05, ({
 
 
 
-MARCDUINO_ACTION(ClosePanelGroup1, :CL01, ({
+MARCDUINO_ACTION(ClosePanelGroup1, #CL01, ({
    // SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, 0);
 
     servoDispatch.setServoEasingMethod(DOOR_LEFT, Easing::CircularEaseIn);
@@ -75,7 +75,7 @@ MARCDUINO_ACTION(ClosePanelGroup1, :CL01, ({
 
 ////////////////
 
-MARCDUINO_ACTION(ClosePanelGroup2, :CL02, ({
+MARCDUINO_ACTION(ClosePanelGroup2, #CL02, ({
     //SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, DOOR_DATAPANEL);
     servoDispatch.setServoEasingMethod(DOOR_DATAPANEL, Easing::CircularEaseIn);
     servoDispatch.moveTo(DOOR_DATAPANEL, 150, 500, 0.0); // completely close
@@ -83,7 +83,7 @@ MARCDUINO_ACTION(ClosePanelGroup2, :CL02, ({
 
 ////////////////
 
-MARCDUINO_ACTION(ClosePanelGroup3, :CL03, ({
+MARCDUINO_ACTION(ClosePanelGroup3, #CL03, ({
     //SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, DOOR_CHARGEBAY);
     servoDispatch.setServoEasingMethod(DOOR_CHARGEBAY, Easing::CircularEaseIn);
     servoDispatch.moveTo(DOOR_CHARGEBAY, 150, 500, 0.0); // completely close
@@ -91,7 +91,7 @@ MARCDUINO_ACTION(ClosePanelGroup3, :CL03, ({
 
 ////////////////
 
-MARCDUINO_ACTION(ClosePanelGroup4, :CL04, ({
+MARCDUINO_ACTION(ClosePanelGroup4, #CL04, ({
     //SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, DOOR_MINI);
     servoDispatch.setServoEasingMethod(DOOR_MINI, Easing::CircularEaseIn);
     servoDispatch.moveTo(DOOR_MINI, 150, 500, 0.0); // completely close
@@ -99,7 +99,7 @@ MARCDUINO_ACTION(ClosePanelGroup4, :CL04, ({
 
 ////////////////
 
-MARCDUINO_ACTION(ClosePanelGroup5, :CL05, ({
+MARCDUINO_ACTION(ClosePanelGroup5, #CL05, ({
     //SEQUENCE_PLAY_ONCE(servoSequencer, SeqPanelAllClose, DOOR_RIGHT);
     servoDispatch.setServoEasingMethod(DOOR_RIGHT, Easing::CircularEaseIn);
     servoDispatch.moveTo(DOOR_RIGHT, 150, 500, 0.0); // completely close
@@ -109,56 +109,56 @@ MARCDUINO_ACTION(ClosePanelGroup5, :CL05, ({
 ///// ARMS SECTION
 //////////////////
 
-MARCDUINO_ACTION(OpenUpperArm, OPUA, ({
+MARCDUINO_ACTION(OpenUpperArm, #OPUA, ({
     OpenUpperArm();
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(OpenLowerArm, OPLA, ({
+MARCDUINO_ACTION(OpenLowerArm, #OPLA, ({
     OpenLowerArm();
 }))
 
-MARCDUINO_ACTION(CloseUpperArm, CLUA, ({
+MARCDUINO_ACTION(CloseUpperArm, #CLUA, ({
     CloseUpperArm();
 }))
 
 ////////////////
 
-MARCDUINO_ACTION(CloseLowerArm, CLLA, ({
+MARCDUINO_ACTION(CloseLowerArm, #CLLA, ({
     CloseLowerArm();
 }))
 
 
-MARCDUINO_ACTION(LiftGripperArm, LGA, ({
+MARCDUINO_ACTION(LiftGripperArm, #LGA, ({
     GrippLift();
 }))
 
-MARCDUINO_ACTION(DownGripperArm, DGA, ({
+MARCDUINO_ACTION(DownGripperArm, #DGA, ({
     GrippDown();
 }))
 
-MARCDUINO_ACTION(CloseClaw, CC, ({
+MARCDUINO_ACTION(CloseClaw, #CC, ({
     CloseClaw();
 }))
 
-MARCDUINO_ACTION(OpenClaw, OC, ({
+MARCDUINO_ACTION(OpenClaw, #OC, ({
     OpenClaw();
 }))
 
-MARCDUINO_ACTION(CPUArmLift, CPUL, ({
+MARCDUINO_ACTION(CPUArmLift, #CPUL, ({
     CPUArmLift();
 }))
 
-MARCDUINO_ACTION(CPUArmDown, CPUD, ({
+MARCDUINO_ACTION(CPUArmDown, #CPUD, ({
     CPUArmDown();
 }))
 
-MARCDUINO_ACTION(CPUArmON, CPU1, ({
+MARCDUINO_ACTION(CPUArmON, #CPU1, ({
     CPUArmON();
 }))
 
-MARCDUINO_ACTION(CPUArmOFF, CPU0, ({
+MARCDUINO_ACTION(CPUArmOFF, #CPU0, ({
     CPUArmOFF();
 }))
 

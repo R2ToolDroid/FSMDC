@@ -8,7 +8,7 @@
 #include "ServoSequencer.h"
 #include "core/Marcduino.h"
 
-#define COMMAND_SERIAL Serial
+#define COMMAND_SERIAL Serial1
 
 #define GROUP_DOORS      0x000F
 
@@ -119,9 +119,10 @@ void setup()
     pinMode(LED_BUILTIN, OUTPUT);
     REELTWO_READY();
     Wire.begin();
+    Serial.begin(115200);
     COMMAND_SERIAL.begin(9600);
     SetupEvent::ready();
-    //COMMAND_SERIAL.print("ready..");
+    Serial.print("ready..");
     resetSequence();
     
     DEBUG_PRINTLN("ready.."); 
