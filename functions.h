@@ -95,10 +95,10 @@ DO ALL SE Marcduino Commands with : Prefix
 
 
 Panels:
-#CL00
+#CL00  even :CL00
 #CL01 - 05
 
-#OP00
+#OP00  even :OP00
 #OP01 - 05
 
 Panels Flutter:
