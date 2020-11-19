@@ -66,7 +66,7 @@ const ServoSettings servoSettings[] PROGMEM = {
     { 15, 1900, 1000, DRAWER_GROUP|DRAWER_GROUP_4 }, /* 14:DRAWER_4 */ 
     { 16, 1000, 2000, 0 }, /* 15:FIRE */
     
-    { 17, 1000, 1500, 0 }, /* 15:SPRAY */
+    { 17, 1500, 1000, 0 }, /* 15:SPRAY */
 };
 
 
