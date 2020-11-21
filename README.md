@@ -2,6 +2,7 @@
  
 Front Skin Marcduino Controller.
 Best with Nano Every or Mega2560 Board and two PCA9568 Servo Boards.
+Based on Astromech Firmware ReelTwo. Please install first in your IDE
 
 ### Accept Serial Commands on Serial1 or Serial
 
