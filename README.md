@@ -1,5 +1,11 @@
 # FSMDC
- Front Skin Marcduino Controller
+ 
+Front Skin Marcduino Controller.
+Best with Nano Every or Mega2560 Board and two PCA9568 Servo Boards.
+Do not forget to address second Board to next #041 I2C 
+
+![address I2C](https://aws1.discourse-cdn.com/standard10/uploads/xod/original/2X/2/2d5c10229152ca2a7e5970a3ae039689d0eccfc4.jpeg)
+
  
 BODY Action with Prefix #
  
