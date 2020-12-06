@@ -8,7 +8,7 @@
 #include "ServoSequencer.h"
 #include "core/Marcduino.h"
 
-#define COMMAND_SERIAL Serial1 // Serial for Nano 328
+#define COMMAND_SERIAL Serial1 //   Serial for Nano 328
 
 #define GROUP_DOORS      0x000F
 
