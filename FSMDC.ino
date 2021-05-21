@@ -8,7 +8,7 @@
 #include "ServoSequencer.h"
 #include "core/Marcduino.h"
 
-#define COMMAND_SERIAL Serial1 //   Serial for Nano 328
+#define COMMAND_SERIAL Serial //   Serial1 for Nano 328
 
 #define GROUP_DOORS      0x000F
 
@@ -30,6 +30,7 @@
 #define DRAWER_4     14
 #define FIRE         15
 #define SPRAY        16
+#define GRIPP_SLIDE  17
 
 #define PANEL_GROUP_1      (1L<<14)
 #define PANEL_GROUP_2      (1L<<15)
@@ -64,9 +65,9 @@ const ServoSettings servoSettings[] PROGMEM = {
     { 13, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_2 }, /* 12:DRAWER_2 */ 
     { 14, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_3 }, /*|13:DRAWER_3 */ 
     { 15, 1900, 1000, DRAWER_GROUP|DRAWER_GROUP_4 }, /* 14:DRAWER_4 */ 
-    { 16, 1000, 2000, 0 }, /* 15:FIRE */
-    
+    { 16, 1000, 2000, 0 }, /* 15:FIRE */  
     { 17, 1500, 1000, 0 }, /* 15:SPRAY */
+    { 18, 800, 2050, 0 }, /* 16:GRIPP_SLIDE */
 };
 
 

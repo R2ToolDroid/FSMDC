@@ -74,8 +74,9 @@ void resetSequence()
 
         
     DelayCall::schedule([] {
-   SEQUENCE_PLAY_ONCE_VARSPEED_EASING(servoSequencer, SeqPanelAllCloseLong, PANELS_MASK, 50, 2000, Easing::CircularEaseIn, Easing::CircularEaseOut);
-   //servoSequencer.play(SeqPanelAllCloseLong, SizeOfArray(SeqPanelAllCloseLong), (PANELS_MASK));
+   //SEQUENCE_PLAY_ONCE_VARSPEED_EASING(servoSequencer, SeqPanelAllCloseLong, PANELS_MASK, 50, 2000, Easing::CircularEaseIn, Easing::CircularEaseOut);
+   
+   servoSequencer.play(SeqPanelAllCloseLong, SizeOfArray(SeqPanelAllCloseLong), (PANELS_MASK));
     }, 3000);
     
     CloseUpperArm();

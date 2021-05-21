@@ -344,6 +344,16 @@ MARCDUINO_ACTION(SprayOFF, #SP0, ({
     servoDispatch.moveTo(SPRAY, 50, 50, 0.0);
 }))
 
+MARCDUINO_ACTION(SlideOUT, SO, ({
+    ///servoDispatch.moveToPulse(SPRAY, 150, 100, 1800); // Einzenelner Servo
+    servoDispatch.moveTo(GRIPP_SLIDE, 50, 3000, 0.0);
+}))
+
+MARCDUINO_ACTION(SlideIN, SI, ({
+    ///servoDispatch.moveToPulse(SPRAY, 150, 100, 1800); // Einzenelner Servo
+    servoDispatch.moveTo(GRIPP_SLIDE, 50, 3000, 1.0);
+}))
+
 ////////////////
 /*
 
@@ -391,6 +401,8 @@ Each servo can have it's own easing style. To set servo easing there are three d
 For a single servo:
 
     servoDispatch.setServoEasingMethod(1, Easing::CircularEaseIn);
+
+                                SERVO, STARTDELAY, MOVETIME, POS
     servoDispatch.moveToPulse(SPRAY, 150, 100, 800); // Einzenelner Servo
 
 For a group of servos
