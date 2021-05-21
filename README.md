@@ -68,6 +68,13 @@ DO ALL SE Marcduino Commands with : Prefix
 
 * #SPRAY  // Move Spary ON and Off
 * #SAON   // Open Door Move Arm and play On/off with Motor
+* SO     //Slider Out
+* SI     //Slider IN
+
+* lock   // Block Reset Function
+* unlock // UnBlock Reset Function
+
+
 
 # Marcduino Commands
 * :SE00     Close all panels (full speed), servo off - use as init only. Use CL00 for all soft close.
