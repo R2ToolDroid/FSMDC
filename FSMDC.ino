@@ -92,6 +92,8 @@ MarcduinoSerial<> marcduinoSerial(COMMAND_SERIAL, player);
 
 int ledState = LOW;   
 
+byte LOCK = false;   //Lock all Doorfunktions
+
 #include "functions.h"
 
 ////////////////

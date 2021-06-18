@@ -354,6 +354,15 @@ MARCDUINO_ACTION(SlideIN, SI, ({
     servoDispatch.moveTo(GRIPP_SLIDE, 50, 3000, 1.0);
 }))
 
+MARCDUINO_ACTION(LOCK, lock, ({
+    Lock();
+}))
+
+MARCDUINO_ACTION(UN_LOCK, unlock, ({
+    Unlock();
+}))
+
+
 ////////////////
 /*
 
