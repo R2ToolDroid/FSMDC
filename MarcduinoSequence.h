@@ -4,6 +4,10 @@ MARCDUINO_ACTION(StopSequence, :SE00, ({
   resetSequence();
 }))
 
+MARCDUINO_ACTION(StopSequence2, :SE10, ({
+  resetSequence();
+}))
+
 ////////////////
 
 MARCDUINO_ACTION(ScreamSequence, :SE01, ({
