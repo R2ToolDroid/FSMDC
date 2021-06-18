@@ -30,7 +30,7 @@
 #define DRAWER_4     14
 #define FIRE         15
 #define SPRAY        16
-#define GRIPP_SLIDE  17
+
 
 #define PANEL_GROUP_1      (1L<<14)
 #define PANEL_GROUP_2      (1L<<15)
@@ -67,7 +67,7 @@ const ServoSettings servoSettings[] PROGMEM = {
     { 15, 1900, 1000, DRAWER_GROUP|DRAWER_GROUP_4 }, /* 14:DRAWER_4 */ 
     { 16, 1000, 2000, 0 }, /* 15:FIRE */  
     { 17, 1500, 1000, 0 }, /* 15:SPRAY */
-    { 18, 800, 2050, 0 }, /* 16:GRIPP_SLIDE */
+    
 };
 
 

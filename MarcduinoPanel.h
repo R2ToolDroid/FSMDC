@@ -344,15 +344,6 @@ MARCDUINO_ACTION(SprayOFF, #SP0, ({
     servoDispatch.moveTo(SPRAY, 50, 50, 0.0);
 }))
 
-MARCDUINO_ACTION(SlideOUT, SO, ({
-    ///servoDispatch.moveToPulse(SPRAY, 150, 100, 1800); // Einzenelner Servo
-    servoDispatch.moveTo(GRIPP_SLIDE, 50, 3000, 0.0);
-}))
-
-MARCDUINO_ACTION(SlideIN, SI, ({
-    ///servoDispatch.moveToPulse(SPRAY, 150, 100, 1800); // Einzenelner Servo
-    servoDispatch.moveTo(GRIPP_SLIDE, 50, 3000, 1.0);
-}))
 
 MARCDUINO_ACTION(LOCK, lock, ({
     Lock();
