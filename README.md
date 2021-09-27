@@ -104,4 +104,14 @@ DO ALL SE Marcduino Commands with : Prefix
 * :SE56     Faint/Short Circuit
 * :SE57     Rhythmic cantina panel dance
 
+
+##MAG TAG PINOUT
+1  +5V data
+2  TX (SDA) FSMDC
+3  RX (SCL) FSMDC
+4  GND (data)
+5  Coin TX
+6  Coin RX
+
+
 ...maybe more to come
