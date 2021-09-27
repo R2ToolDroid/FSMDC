@@ -106,12 +106,12 @@ DO ALL SE Marcduino Commands with : Prefix
 
 
 ##MAG TAG PINOUT
-1  +5V data
-2  TX (SDA) FSMDC
-3  RX (SCL) FSMDC
-4  GND (data)
-5  Coin TX
-6  Coin RX
+* 1  +5V data
+* 2  TX (SDA) FSMDC
+* 3  RX (SCL) FSMDC
+* 4  GND (data)
+* 5  Coin TX
+* 6  Coin RX
 
 
 ...maybe more to come
