@@ -8,7 +8,7 @@
 #include "ServoSequencer.h"
 #include "core/Marcduino.h"
 
-#define COMMAND_SERIAL Serial1 //   Serial1 for LIVE   Serial  for USB Command
+#define COMMAND_SERIAL Serial //   Serial1 for LIVE   Serial  for USB Command
 
 #define GROUP_DOORS      0x000F
 
@@ -125,7 +125,7 @@ void setup()
     REELTWO_READY();
     Wire.begin();
     
-    Serial.begin(115200);  //delete for Nano 328
+    //Serial.begin(115200);  //delete for Nano 328
     
     COMMAND_SERIAL.begin(9600);
     SetupEvent::ready();
