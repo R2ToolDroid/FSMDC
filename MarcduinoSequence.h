@@ -293,15 +293,15 @@ MARCDUINO_ANIMATION(SrewArmON, #SAON)
         //servoDispatch.moveTo(CPUARM_EXTEND, 50, 50, 1.0);
         CPUArmON(); 
     })
-    DO_WAIT_MILLIS(500)
+    DO_WAIT_MILLIS(1000)
     DO_ONCE({
         CPUArmOFF();
     })
-    DO_WAIT_MILLIS(500)
+    DO_WAIT_MILLIS(1500)
     DO_ONCE({
        CPUArmON(); 
     })
-    DO_WAIT_MILLIS(500)
+    DO_WAIT_MILLIS(1500)
     DO_ONCE({
        CPUArmOFF(); 
     })

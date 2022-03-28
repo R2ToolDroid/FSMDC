@@ -8,7 +8,7 @@
 #include "ServoSequencer.h"
 #include "core/Marcduino.h"
 
-#define COMMAND_SERIAL Serial //   Serial1 for LIVE   Serial  for USB Command
+#define COMMAND_SERIAL Serial1 //   Serial1 for LIVE   Serial  for USB Command
 
 #define GROUP_DOORS      0x000F
 
@@ -59,7 +59,7 @@ const ServoSettings servoSettings[] PROGMEM = {
     { 7,  600, 2500, 0 },             /* 6: LOWER_ARM */
     { 8,  800, 2050, 0 },            /* 7: GRIPP_LIFT */
     { 9,  1000, 1400, 0 },            /* 8: GRIPP_CLAW */
-    { 10, 1100, 900, 0 },            /* 9: CPUARM_EXTEND */
+    { 10, 950, 1100, 0 },            /* 9: CPUARM_EXTEND */
     { 11, 800, 2050, 0 },            /* 10:CPUARM_LIFT */
     { 12, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_1 }, /* 11:DRAWER_1 */
     { 13, 2100, 1000, DRAWER_GROUP|DRAWER_GROUP_2 }, /* 12:DRAWER_2 */ 
